@@ -1,6 +1,6 @@
 //code to find the second largest element in an array of order 2
 
-package Array2;
+package Array2.Easy;
 public class Sec_largest {
         public static void main(String[] args) {
             // Example array and its size

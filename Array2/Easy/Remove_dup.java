@@ -1,6 +1,6 @@
 // Imp question (remove the duplicates number from the given sorted array and return the number of uniques elements  )
 
-package Array2;
+package Array2.Easy;
 
 public class Remove_dup{
     public static int removeDuplicates(int[] arr,int n) {
