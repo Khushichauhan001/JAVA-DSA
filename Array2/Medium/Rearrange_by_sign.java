@@ -1,5 +1,5 @@
 // this is a bruteful approach to solve this 
-package Array2.Medium;
+// package Array2.Medium;
 
 import java.util.ArrayList;
 
