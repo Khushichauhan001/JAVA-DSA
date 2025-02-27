@@ -15,9 +15,11 @@ public class LearnArrayClass {
 
         for(int i : numbers) {
             System.out.print(i+ " ");
-        }
+        } 
 
         // to fill values in each array
         Arrays.fill(numbers , 12);
     }
 }
+
+

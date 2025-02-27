@@ -11,7 +11,7 @@ class Hashing{
         arr[i] = s1.nextInt();
     }
      
-    // pre compute
+    // pre compute  
     int[] hash = new int[13];
     for(int i = 0 ; i<n;i++){
         hash[arr[i]] += 1;
