@@ -1,3 +1,4 @@
+package LinkedList;
 // leetcode 83 
 public class RemoveDuplicate {
     public class ListNode {

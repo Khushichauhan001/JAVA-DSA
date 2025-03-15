@@ -1,3 +1,4 @@
+package LinkedList;
 import java.util.*;
 
 // leetcode - 21
