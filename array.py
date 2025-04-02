@@ -1,3 +1,10 @@
-def goodDay(name):
-    print("Goodday " + name)
-goodDay("Khushi")
+def factor(num):
+    flist =[]
+    if num  >= 1:
+        for i in range[1,num+1]:
+            if num%i == 0:
+                flist.append(i)
+        return flist
+        
+print(factor(6))
+print(factor(13))
