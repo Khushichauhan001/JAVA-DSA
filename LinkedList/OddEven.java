@@ -1,4 +1,4 @@
-package LinkedList;
+// package LinkedList;
 // leetcode 328 
 public class OddEven {
         
