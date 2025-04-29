@@ -1,4 +1,4 @@
-package LinkedList;
+// package LinkedList;
 // leetcode 83 
 public class RemoveDuplicate {
     public class ListNode {
@@ -6,7 +6,7 @@ public class RemoveDuplicate {
         ListNode next;
         ListNode() {}
         ListNode(int val) { 
-         this.val = val; 
+        this.val= val;
        }
         ListNode(int val, ListNode next) { 
          this.val = val; 

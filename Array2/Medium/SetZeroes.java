@@ -1,4 +1,4 @@
-// package Array2.Medium;
+package Array2.Medium;
 // it is the optimal approac to solve this ...
 public class SetZeroes {
     public static int[][] zeroMatrix(int[][] matrix) {

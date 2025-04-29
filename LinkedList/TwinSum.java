@@ -1,4 +1,4 @@
-package LinkedList;
+// package LinkedList;
 // leetcode 2130
 public class TwinSum {
 
@@ -42,6 +42,18 @@ public class TwinSum {
             
                 return maxSum ;
             
+        }
+
+        public static void main(String[] args) {
+            TwinSum t1 = new TwinSum();
+            ListNode head = new ListNode(1);
+            head.next = new ListNode(10);
+            head.next.next = new ListNode(13);
+            head.next.next.next = new ListNode(2);
+            // head.next.next.next.next =new ListNode(7); 
+
+            int  result = t1.pairSum(head);
+            System.out.println(result);
         }
     
 }

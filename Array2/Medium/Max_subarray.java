@@ -1,5 +1,6 @@
 package Array2.Medium;
 
+//kadaneś algorithm 
 public class Max_subarray {
     public static long maxSubarraySum(int[] arr, int n) {
         long maxiEle = Long.MIN_VALUE;

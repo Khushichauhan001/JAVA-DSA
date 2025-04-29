@@ -1,3 +1,6 @@
+
+
+package Array2.Medium;
 public class Rotate_by_90_clock {
     static int[][] rotate(int[][] matrix) {
         int n= matrix.length ;

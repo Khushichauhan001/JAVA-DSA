@@ -1,5 +1,5 @@
 // leetcode 160 
-package LinkedList;
+// package LinkedList;
 
 public class Intersection_of_ll {
 

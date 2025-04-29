@@ -1,10 +1,10 @@
-package LinkedList;
+// package LinkedList;
 import java.util.*;
 
 // leetcode - 21
 //  brute approac where we need to take extra space 
 class MergeSortedList {
-    public class ListNode {
+    public static class ListNode {
        int val;
        ListNode next;
        ListNode() {}
@@ -17,7 +17,7 @@ class MergeSortedList {
        }
    }
 
-     public ListNode MergeTwoLists(ListNode list1, ListNode list2) {
+     public static ListNode MergeTwoLists(ListNode list1, ListNode list2) {
         ListNode temp1 = list1 ;
         ListNode temp2 = list2 ;
         ListNode head = new ListNode(100);   // just temporary value dal di bd m head.next return kr dengi
@@ -47,6 +47,34 @@ class MergeSortedList {
     }
     return head.next ;
      }
+
+
+     public static void printList(ListNode head ){
+      ListNode temp = head ;
+         while(temp!=null){
+          System.out.println(temp.val);
+          temp = temp.next ;
+           
+         }
+         System.out.println();
+     }
+
+     public static void main(String[] args) {
+      
+      ListNode list1 = new ListNode(1);
+      list1.next = new ListNode(2);
+      list1.next.next = new ListNode(4);
+
+
+      ListNode list2 = new ListNode(2);
+      list2.next = new ListNode(4);
+      list2.next.next = new ListNode(6);
+
+      ListNode mergedList = MergeTwoLists(list1, list2);
+      printList(mergedList);
+     }
+
+
   }
 
 

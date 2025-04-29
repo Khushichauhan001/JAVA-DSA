@@ -74,3 +74,58 @@ public class ReverseList {
 //     }
 // }
 
+
+// public class ReverseList {
+//     public static class Node {
+//         int val;
+//         Node next;
+//         Node(int val) {
+//             this.val = val;
+//         }
+//     }
+
+//     public static void display(Node head) {
+//         Node temp = head;
+//         while (temp != null) {
+//             System.out.print(temp.val + " ");
+//             temp = temp.next;
+//         }
+//         System.out.println();
+//     }
+
+//     public static Node reverse(Node head) {
+//         Node prev = null;
+//         Node curr = head;
+//         Node next = null;
+        
+//         while (curr != null) {
+//             next = curr.next;  // save next node
+//             curr.next = prev;  // reverse the link
+//             prev = curr;       // move prev one step ahead
+//             curr = next;       // move curr one step ahead
+//         }
+        
+//         return prev; // prev will be new head
+//     }
+
+//     public static void main(String[] args) {
+//         Node a = new Node(3);
+//         Node b = new Node(5);
+//         Node c = new Node(1);
+//         Node d = new Node(2);
+
+//         // linking the nodes
+//         a.next = b;
+//         b.next = c;
+//         c.next = d;
+//         d.next = null;
+
+//         System.out.println("Original List:");
+//         display(a);
+
+//         Node newHead = reverse(a);
+//         System.out.println("Reversed List:");
+//         display(newHead);
+//     }
+// }
+

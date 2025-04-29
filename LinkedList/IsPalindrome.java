@@ -45,5 +45,77 @@ public class IsPalindrome {
              }
              return true;
         }
+
+        public static void main(String[] args) {
+            IsPalindrome obj = new IsPalindrome();
+    
+            // Create linked list: 1 -> 2 -> 3 -> 2 -> 1
+            ListNode head = new ListNode(1);
+            head.next = new ListNode(2);
+            head.next.next = new ListNode(3);
+            head.next.next.next = new ListNode(2);
+            head.next.next.next.next = new ListNode(1);
+    
+            // Check if it's palindrome
+            boolean result = obj.isPalindromeee(head);
+            System.out.println("Is Palindrome: " + result);
+        }
     
 }
+
+
+
+//in doubly ll
+// public class PalindromeDLL {
+
+//     // Node of Doubly Linked List
+//     static class Node {
+//         int data;
+//         Node next, prev;
+
+//         Node(int data) {
+//             this.data = data;
+//         }
+//     }
+
+//     // Function to check if DLL is palindrome
+//     public static boolean isPalindrome(Node head) {
+//         if (head == null || head.next == null) return true;
+
+//         // Step 1: Find tail
+//         Node tail = head;
+//         while (tail.next != null) {
+//             tail = tail.next;
+//         }
+
+//         // Step 2: Two pointer approach
+//         Node left = head;
+//         Node right = tail;
+
+//         while (left != right && right.next != left) {
+//             if (left.data != right.data) return false;
+//             left = left.next;
+//             right = right.prev;
+//         }
+
+//         return true;
+//     }
+
+//     // Function to create and test DLL
+//     public static void main(String[] args) {
+//         // Create nodes
+//         Node a = new Node(1);
+//         Node b = new Node(2);
+//         Node c = new Node(3);
+//         Node d = new Node(2);
+//         Node e = new Node(1);
+
+//         // Connect them
+//         a.next = b; b.prev = a;
+//         b.next = c; c.prev = b;
+//         c.next = d; d.prev = c;
+//         d.next = e; e.prev = d;
+
+//         System.out.println("Is Palindrome: " + isPalindrome(a));
+//     }
+// }
