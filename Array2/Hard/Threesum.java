@@ -1,100 +1,69 @@
 package Array2.Hard;
-
-//optimal
-
-
 import java.util.*;
+//better using hashing 
 
-public class Threesum {
-    public static List<List<Integer>> triplet(int n, int[] arr) {
-        List<List<Integer>> ans = new ArrayList<>();
-        Arrays.sort(arr);
+class Threesum {
+    public List<List<Integer>> threeSum(int[] nums) {
+        int n= nums.length ;
+        Set<List<Integer>> st = new HashSet<>();
+         
+         for(int i=0; i< n ; i++){
+            Set<Integer> h1 = new HashSet<>();
+            for(int j=i+1 ;j< n ;j++){
+                int third = -(nums[i]+nums[j]);
 
-        for (int i = 0; i < n; i++) {
-            //remove duplicates:
-            if (i != 0 && arr[i] == arr[i - 1]) continue;
-
-            //moving 2 pointers:
-            int j = i + 1;
-            int k = n - 1;
-            while (j < k) {
-                int sum = arr[i] + arr[j] + arr[k];
-                if (sum < 0) {
-                    j++;
-                } else if (sum > 0) {
-                    k--;
-                } else {
-                    List<Integer> temp = Arrays.asList(arr[i], arr[j], arr[k]);
-                    ans.add(temp);
-                    j++;
-                    k--;
-                    //skip the duplicates:
-                    while (j < k && arr[j] == arr[j - 1]) j++;
-                    while (j < k && arr[k] == arr[k + 1]) k--;
+                if(h1.contains(third)){
+                    List<Integer> temp = Arrays.asList(nums[i], nums[j] , third);
+                    Collections.sort(temp);
+                    st.add(temp);
                 }
+                h1.add(nums[j]);
             }
-        }
-
-        return ans;
+         }
+         List<List<Integer>> ans = new ArrayList<>(st);
+         return ans;
     }
 
     public static void main(String[] args) {
-        int[] arr = { -1, 0, 1, 2, -1, -4};
-        int n = arr.length;
-        List<List<Integer>> ans = triplet(n, arr);
-        for (List<Integer> it : ans) {
-            System.out.print("[");
-            for (Integer i : it) {
-                System.out.print(i + " ");
-            }
-            System.out.print("] ");
-        }
-        System.out.println();
+        int[] nums = {-1,0,1,2,-1,-4};
+        Threesum t1 = new Threesum();
+        System.out.println(t1.threeSum(nums));
     }
 }
 
 
 
-//optimal 
 
+//optimal sol 
 // import java.util.*;
 
-// public class tUf {
-//     public static List<List<Integer>> triplet(int n, int[] arr) {
-//         Set<List<Integer>> st = new HashSet<>();
+// public class Solution {
+//     public List<List<Integer>> threeSum(int[] nums) {
+//         List<List<Integer>> ans = new ArrayList<>();
+//         Arrays.sort(nums);
+//         int n = nums.length;
 
 //         for (int i = 0; i < n; i++) {
-//             Set<Integer> hashset = new HashSet<>();
-//             for (int j = i + 1; j < n; j++) {
-//                 //Calculate the 3rd element:
-//                 int third = -(arr[i] + arr[j]);
+//             if (i != 0 && nums[i] == nums[i - 1]) continue;
 
-//                 //Find the element in the set:
-//                 if (hashset.contains(third)) {
-//                     List<Integer> temp = Arrays.asList(arr[i], arr[j], third);
-//                     temp.sort(null);
-//                     st.add(temp);
+//             int j = i + 1;
+//             int k = n - 1;
+//             while (j < k) {
+//                 int sum = nums[i] + nums[j] + nums[k];
+//                 if (sum < 0) {
+//                     j++;
+//                 } else if (sum > 0) {
+//                     k--;
+//                 } else {
+//                     ans.add(Arrays.asList(nums[i], nums[j], nums[k]));
+//                     j++;
+//                     k--;
+//                     while (j < k && nums[j] == nums[j - 1]) j++;
+//                     while (j < k && nums[k] == nums[k + 1]) k--;
 //                 }
-//                 hashset.add(arr[j]);
 //             }
 //         }
 
-//         // store the set elements in the answer:
-//         List<List<Integer>> ans = new ArrayList<>(st);
 //         return ans;
-//     }
-
-//     public static void main(String[] args) {
-//         int[] arr = { -1, 0, 1, 2, -1, -4};
-//         int n = arr.length;
-//         List<List<Integer>> ans = triplet(n, arr);
-//         for (List<Integer> it : ans) {
-//             System.out.print("[");
-//             for (Integer i : it) {
-//                 System.out.print(i + " ");
-//             }
-//             System.out.print("] ");
-//         }
-//         System.out.println();
 //     }
 // }
