@@ -6,7 +6,7 @@ public class SumAlternateSign {
     static int sumAlter(int n){
         if(n==0)  return 0 ;
         int smallAns = sumAlter(n-1);
-        if(n%2==0){
+        if(n%2==0){  // if even 
             return smallAns-n;
         }
         else {
