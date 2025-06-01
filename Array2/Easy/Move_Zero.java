@@ -1,5 +1,8 @@
 // this is the optimal approach 
 // package Array2.Easy;
+
+//Two pointers approach 
+
 // public class Move_Zero{
 //     public static int[] moveZeroes(int[] nums) {
 //         int n = nums.length;
@@ -15,7 +18,7 @@
 //             return nums;
 //         }
 
-//          for(int i = j+         1; i<n;i++){
+//          for(int i = j+1; i<n;i++){
 //             if(nums[i] != 0 ){
 //                int temp = nums[i];
 //                nums[i] = nums[j];
