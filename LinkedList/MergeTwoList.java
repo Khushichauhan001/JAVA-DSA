@@ -1,5 +1,5 @@
-// package LinkedList;
-import java.util.*;
+package LinkedList;
+// import java.util.*;
 
 // leetcode - 21
 //  brute approac where we need to take extra space 

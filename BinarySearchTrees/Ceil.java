@@ -1,5 +1,7 @@
 package BinarySearchTrees;
 
+
+//recursive approach   tc: 0(h) sc: 0(h)
 class Node{
     int data ;
     Node left , right ;
@@ -42,3 +44,42 @@ public class Ceil {
         }
     }
 }
+
+
+
+
+
+
+//iterative approach
+// tc: o(h)   sc: 0(1)
+
+
+
+// class Solution {
+//     public TreeNode insertIntoBST(TreeNode root, int val) {
+//         TreeNode newNode = new TreeNode(val);
+//         if (root == null)
+//             return newNode;
+
+//         TreeNode curr = root;
+//         while (true) {
+//             if (val < curr.val) {
+//                 if (curr.left == null) {
+//                     curr.left = newNode;
+//                     break;
+//                 } else {
+//                     curr = curr.left;
+//                 }
+//             } else {
+//                 if (curr.right == null) {
+//                     curr.right = newNode;
+//                     break;
+//                 } else {
+//                     curr = curr.right;
+//                 }
+//             }
+//         }
+//         return root;
+//     }
+// }
+

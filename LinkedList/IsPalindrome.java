@@ -1,4 +1,4 @@
-
+package LinkedList;
 // leetcode 234
 public class IsPalindrome {
 

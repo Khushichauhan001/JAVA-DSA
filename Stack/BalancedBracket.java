@@ -24,6 +24,7 @@ public class BalancedBracket{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        System.out.println(isBoolean("(())))()"));
+        System.out.println(isBoolean(str));
+        sc.close();
     }
  }

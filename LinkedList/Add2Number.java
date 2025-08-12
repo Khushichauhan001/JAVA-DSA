@@ -1,13 +1,14 @@
 // Definition for singly-linked list.
-
-public class Add2Number {
+package LinkedList;
+class ListNode {
     int val;
    ListNode next;
    ListNode() {}
    ListNode(int val) { this.val = val; }
-   ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+   ListNode(int val, ListNode next) { this.val = val; this.next = next; 
+}
 
-class Solution {
+class Add2Number {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(); 
         ListNode temp = dummy; 
@@ -33,3 +34,5 @@ class Solution {
         return dummy.next;
     }
 }
+}
+
