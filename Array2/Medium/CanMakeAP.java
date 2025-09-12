@@ -29,6 +29,7 @@ public class CanMakeAP {
 
 
 
+
 // /better approach tc: 0(n) sc: 0(n)
 
 // class Solution {
