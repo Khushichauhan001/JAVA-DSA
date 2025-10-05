@@ -21,5 +21,6 @@ public class Factorial {
         int n = sc.nextInt();   
         // findFact(n);
         System.out.println(findFact(n));
+        sc.close();
     }
 }

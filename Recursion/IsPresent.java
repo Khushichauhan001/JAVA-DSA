@@ -36,7 +36,20 @@ public class IsPresent {
        ArrayList<Integer> smallAns = findAllIndices(arr, target, idx+1);   //5 6
        ans.addAll(smallAns);
        return ans ;
-             
+    }
+
+    static ArrayList<Integer> PracticeOnly(int[] arr , int target , int idx){
+        int n = arr.length ;
+        ArrayList<Integer> a1 = new ArrayList<>();
+        if(idx>=n){
+            return a1 ;
+        }
+        if(arr[idx] == target ){
+            a1.add(idx);
+        }
+        ArrayList<Integer> smallArrayList = PracticeOnly(arr, target, idx+1);
+        a1.addAll(smallArrayList);
+        return a1 ;
     }
    public static void main(String[] args) {
         int[] arr ={2,3,5,6,8,3,3,4};
@@ -48,3 +61,5 @@ public class IsPresent {
         }
     }
 }
+
+

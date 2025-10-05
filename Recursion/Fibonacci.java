@@ -25,5 +25,6 @@ public class Fibonacci {
         for(int i=0 ;i<=n;i++){
             System.out.print(fibo(i));
         }
+        sc.close();
     }
 }
