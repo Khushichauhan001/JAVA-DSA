@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class CourseSchedule1 {
-     public boolean canFinish(int numCourses, int[][] prerequisites) {
+     public static boolean canFinish(int numCourses, int[][] prerequisites) {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         for(int i=0 ;i<numCourses;i++){
             adj.add(new ArrayList<>());
@@ -40,5 +40,20 @@ public class CourseSchedule1 {
         }
         if(l1.size() ==  numCourses ) return true ;
         return false ;
+    }
+    public static void main(String[] args) {
+         int numCourses = 4;
+        int[][] prerequisites = new int[3][2];
+        prerequisites[0][0] = 1;
+        prerequisites[0][1] = 0;
+
+        prerequisites[1][0] = 2;
+        prerequisites[1][1] = 1;
+
+        prerequisites[2][0] = 3;
+        prerequisites[2][1] = 2;
+
+        boolean ans =canFinish(numCourses, prerequisites);
+        System.out.println(ans);
     }
 }
