@@ -8,19 +8,16 @@ class Island {
       q.add(new Pair(ro, co)); 
       int n = grid.length; 
       int m = grid[0].length; 
-      
-      // until the queue becomes empty
+    
       while(!q.isEmpty()) {
           int row = q.peek().first; 
           int col = q.peek().second; 
           q.remove(); 
-          
-          // traverse in the neighbours and mark them if its a land 
+        
           for(int delrow = -1; delrow<=1;delrow++) {
               for(int delcol = -1; delcol <= 1; delcol++) {
                   int nrow = row + delrow; 
                   int ncol = col + delcol; 
-          // check if neighbour row and column is valid, and is an unvisited land
                   if(nrow >= 0 && nrow < n && ncol >= 0 && ncol < m 
                   && grid[nrow][ncol] == '1' && vis[nrow][ncol] == 0) {
                       vis[nrow][ncol] = 1; 
